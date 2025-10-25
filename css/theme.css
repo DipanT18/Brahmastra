@@ -1,0 +1,587 @@
+/* Mahabharata Theme Styles - Brahmastra Authentication System */
+
+/* Mahabharata Color Palette - Traditional Indian Colors */
+:root {
+    /* Primary Colors - Inspired by Traditional Indian Art */
+    --saffron: #FF9933;           /* Knowledge and sacrifice */
+    --saffron-light: #FFB366;
+    --saffron-dark: #E6851A;
+    --saffron-muted: rgba(255, 153, 51, 0.8);
+    
+    --white: #FFFFFF;             /* Purity and peace */
+    --off-white: #FEFEFE;
+    --cream: #FFF8F0;
+    --ivory: #FFFFF0;
+    
+    --green: #138808;             /* Prosperity and growth */
+    --green-light: #4CAF50;
+    --green-dark: #0F6B06;
+    --green-muted: rgba(19, 136, 8, 0.8);
+    
+    --brown: #3E2723;             /* Earth and stability */
+    --brown-light: #5D4037;
+    --brown-dark: #2E1A16;
+    --brown-medium: #4A2C2A;
+    
+    /* Semantic Colors */
+    --sindoor-red: #D32F2F;       /* Warning and alertness */
+    --sindoor-light: #F44336;
+    --forest-green: #388E3C;      /* Achievement and success */
+    --golden-yellow: #FFD700;     /* Divine light and wisdom */
+    --lotus-pink: #F8BBD9;        /* Purity and enlightenment */
+    
+    /* Extended Spacing Scale */
+    --spacing-xs: 0.25rem;        /* 4px */
+    --spacing-sm: 0.5rem;         /* 8px */
+    --spacing-md: 1rem;           /* 16px */
+    --spacing-lg: 1.5rem;         /* 24px */
+    --spacing-xl: 2rem;           /* 32px */
+    --spacing-2xl: 3rem;          /* 48px */
+    --spacing-3xl: 4rem;          /* 64px */
+    --spacing-4xl: 6rem;          /* 96px */
+    
+    /* Typography Scale - Traditional Indian Proportions */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 2rem;        /* 32px */
+    --font-size-4xl: 2.5rem;      /* 40px */
+    --font-size-5xl: 3rem;        /* 48px */
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    
+    /* Line Heights */
+    --line-height-tight: 1.25;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 2;
+    
+    /* Theme Color Assignments */
+    --accent-primary: var(--saffron);
+    --accent-hover: var(--saffron-dark);
+    --accent-light: var(--saffron-light);
+    
+    /* Background Colors */
+    --bg-primary: linear-gradient(135deg, var(--cream) 0%, var(--off-white) 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --input-bg: var(--white);
+    --input-bg-focus: var(--cream);
+    
+    /* Text Colors */
+    --text-primary: var(--brown);
+    --text-secondary: var(--brown-light);
+    --text-placeholder: rgba(62, 39, 35, 0.6);
+    --text-error: var(--sindoor-red);
+    
+    /* Border Colors */
+    --border-primary: rgba(255, 153, 51, 0.3);
+    --border-accent: var(--saffron);
+    --border-focus: var(--saffron);
+    --border-error: var(--sindoor-red);
+    
+    /* Button Colors */
+    --button-primary-bg: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-dark) 100%);
+    --button-primary-hover: linear-gradient(135deg, var(--saffron-light) 0%, var(--saffron) 100%);
+    --button-primary-text: var(--white);
+    
+    /* Focus Ring */
+    --focus-ring: rgba(255, 153, 51, 0.3);
+}
+
+/* Background Pattern */
+body {
+    background: var(--bg-primary);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 153, 51, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(19, 136, 8, 0.1) 0%, transparent 50%),
+        linear-gradient(45deg, transparent 40%, rgba(255, 215, 0, 0.05) 50%, transparent 60%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Authentication Card Enhancements */
+.auth-card {
+    position: relative;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--saffron), var(--green), var(--saffron));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    z-index: -1;
+}
+
+/* Traditional Pattern Overlay */
+.auth-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20px 20px, rgba(255, 153, 51, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 60px 60px, rgba(19, 136, 8, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px, 80px 80px;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content is above the pattern */
+.auth-header,
+.auth-form,
+.auth-footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo Styling */
+.logo {
+    filter: drop-shadow(0 2px 4px rgba(255, 153, 51, 0.3));
+    transition: transform var(--transition-normal);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Typography Enhancements */
+.auth-title {
+    background: linear-gradient(135deg, var(--saffron), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Input Enhancements - Traditional Indian Aesthetics */
+.form-input {
+    border: 2px solid var(--border-primary);
+    background: var(--input-bg);
+    transition: all var(--transition-normal);
+    position: relative;
+    
+    /* Traditional golden accent styling */
+    background-image: linear-gradient(135deg, transparent 0%, rgba(255, 215, 0, 0.05) 100%);
+    
+    /* Subtle traditional pattern */
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+.form-input::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg, var(--golden-yellow), var(--saffron));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    z-index: -1;
+}
+
+.form-input:focus {
+    border-color: var(--border-focus);
+    box-shadow: 
+        0 0 0 3px var(--focus-ring),
+        0 4px 12px rgba(255, 153, 51, 0.15),
+        inset 0 1px 3px rgba(255, 215, 0, 0.2);
+    background: var(--input-bg-focus);
+    
+    /* Golden glow effect on focus */
+    background-image: 
+        linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 153, 51, 0.1) 100%),
+        radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+}
+
+.form-input:hover:not(:focus) {
+    border-color: var(--saffron-light);
+    background-image: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 153, 51, 0.08) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 153, 51, 0.1);
+}
+
+/* Enhanced placeholder styling */
+.form-input::placeholder {
+    color: var(--text-placeholder);
+    font-style: italic;
+    transition: all var(--transition-fast);
+}
+
+.form-input:focus::placeholder {
+    color: var(--saffron-muted);
+    transform: translateX(4px);
+}
+
+/* Input Icons - Traditional Indian styling */
+.input-icon {
+    filter: sepia(1) saturate(2) hue-rotate(25deg) brightness(1.2);
+    opacity: 0.7;
+    transition: all var(--transition-normal);
+    
+    /* Golden tint for traditional look */
+    color: var(--saffron);
+}
+
+.form-input:focus + .input-icon,
+.input-wrapper:hover .input-icon {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+    filter: sepia(1) saturate(3) hue-rotate(25deg) brightness(1.4);
+    
+    /* Golden glow effect */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+/* Form Labels - Traditional styling */
+.form-label {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semibold);
+    position: relative;
+    transition: all var(--transition-normal);
+}
+
+.form-label::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--saffron), var(--golden-yellow));
+    transition: width var(--transition-normal);
+}
+
+.form-group:focus-within .form-label::after {
+    width: 100%;
+}
+
+.form-group:focus-within .form-label {
+    color: var(--saffron);
+    transform: translateX(2px);
+}
+
+/* Checkbox Styling - Traditional Indian Design */
+.form-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--input-bg);
+    border: 2px solid var(--border-primary);
+    position: relative;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal);
+    
+    /* Traditional golden accent */
+    background-image: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, transparent 100%);
+}
+
+.form-checkbox:hover {
+    border-color: var(--saffron-light);
+    background-image: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 153, 51, 0.1) 100%);
+    transform: scale(1.05);
+}
+
+.form-checkbox:checked {
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--golden-yellow) 100%);
+    border-color: var(--saffron);
+    box-shadow: 
+        0 0 0 3px rgba(255, 153, 51, 0.3),
+        inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.form-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    animation: checkmarkAppear 0.3s ease-out forwards;
+}
+
+@keyframes checkmarkAppear {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Checkbox Label Enhancement */
+.checkbox-label {
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.checkbox-label:hover {
+    color: var(--saffron);
+    transform: translateX(2px);
+}
+
+/* Button Enhancements */
+.auth-button.primary {
+    background: var(--button-primary-bg);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-button.primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left var(--transition-slow);
+}
+
+.auth-button.primary:hover::before {
+    left: 100%;
+}
+
+.auth-button.primary:hover {
+    background: var(--button-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 25px rgba(255, 153, 51, 0.3),
+        0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Link Styling */
+.forgot-password-link,
+.terms-link,
+.auth-link {
+    color: var(--accent-primary);
+    position: relative;
+    text-decoration: none;
+}
+
+.forgot-password-link::after,
+.terms-link::after,
+.auth-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--saffron), var(--green));
+    transition: width var(--transition-normal);
+}
+
+.forgot-password-link:hover::after,
+.terms-link:hover::after,
+.auth-link:hover::after {
+    width: 100%;
+}
+
+/* Error State Styling - Traditional Indian aesthetics */
+.form-input:invalid:not(:placeholder-shown) {
+    border-color: var(--border-error);
+    box-shadow: 
+        0 0 0 3px rgba(211, 47, 47, 0.2),
+        inset 0 1px 3px rgba(211, 47, 47, 0.1);
+    background-image: 
+        linear-gradient(135deg, rgba(211, 47, 47, 0.05) 0%, transparent 100%),
+        repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(211, 47, 47, 0.05) 2px, rgba(211, 47, 47, 0.05) 4px);
+    animation: errorShake 0.4s ease-in-out;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+.error-message:not(:empty) {
+    color: var(--text-error);
+    font-weight: var(--font-weight-medium);
+    position: relative;
+    padding-left: var(--spacing-lg);
+}
+
+.error-message:not(:empty)::before {
+    content: '⚠';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--sindoor-red);
+    font-size: var(--font-size-sm);
+}
+
+/* Success State - Traditional green with golden accents */
+.form-input.success {
+    border-color: var(--forest-green);
+    box-shadow: 
+        0 0 0 3px rgba(56, 142, 60, 0.2),
+        inset 0 1px 3px rgba(56, 142, 60, 0.1);
+    background-image: 
+        linear-gradient(135deg, rgba(56, 142, 60, 0.05) 0%, rgba(255, 215, 0, 0.05) 100%);
+}
+
+.success-message:not(:empty) {
+    color: var(--forest-green);
+    font-weight: var(--font-weight-medium);
+    position: relative;
+    padding-left: var(--spacing-lg);
+}
+
+.success-message:not(:empty)::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--forest-green);
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+}
+
+/* Password Toggle Button Enhancement */
+.password-toggle {
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-sm);
+    color: var(--saffron-muted);
+}
+
+.password-toggle:hover {
+    color: var(--saffron);
+    background: rgba(255, 153, 51, 0.1);
+    transform: scale(1.1);
+}
+
+.password-toggle:focus {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+    background: rgba(255, 153, 51, 0.15);
+}
+
+/* Animation for form appearance */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* Stagger animation for form elements */
+.form-group {
+    animation: slideInUp 0.4s ease-out backwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-group:nth-child(5) { animation-delay: 0.5s; }
+
+.auth-button {
+    animation: slideInUp 0.4s ease-out 0.6s backwards;
+}
+
+.auth-footer {
+    animation: slideInUp 0.4s ease-out 0.7s backwards;
+}
+
+/* Dark mode support (for future implementation) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        --card-bg: rgba(30, 30, 30, 0.95);
+        --input-bg: #2d2d2d;
+        --input-bg-focus: #3a3a3a;
+        --text-primary: #e0e0e0;
+        --text-secondary: #b0b0b0;
+        --text-placeholder: rgba(224, 224, 224, 0.6);
+        --border-primary: rgba(255, 153, 51, 0.4);
+    }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+    .auth-card::before {
+        background: var(--saffron);
+    }
+    
+    .form-input {
+        border-width: 3px;
+    }
+    
+    .auth-button.primary {
+        border: 3px solid var(--brown);
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .auth-card,
+    .form-group,
+    .auth-button,
+    .auth-footer {
+        animation: none;
+    }
+    
+    .auth-button.primary::before {
+        display: none;
+    }
+    
+    .logo {
+        transition: none;
+    }
+}

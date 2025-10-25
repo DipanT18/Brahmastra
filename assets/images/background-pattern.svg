@@ -1,0 +1,37 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Traditional Indian Geometric Background Pattern -->
+  <defs>
+    <pattern id="geometricPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <!-- Traditional mandala-inspired pattern -->
+      <g opacity="0.1">
+        <!-- Central diamond -->
+        <path d="M25 10 L35 20 L25 30 L15 20 Z" fill="#FF9933"/>
+        <path d="M25 20 L35 30 L25 40 L15 30 Z" fill="#138808"/>
+        
+        <!-- Corner elements -->
+        <circle cx="10" cy="10" r="3" fill="#FFD700"/>
+        <circle cx="40" cy="10" r="3" fill="#FFD700"/>
+        <circle cx="40" cy="40" r="3" fill="#FFD700"/>
+        <circle cx="10" cy="40" r="3" fill="#FFD700"/>
+        
+        <!-- Connecting lines -->
+        <path d="M10 10 L25 25 L40 10" stroke="#FF9933" stroke-width="0.5" fill="none"/>
+        <path d="M40 10 L25 25 L40 40" stroke="#138808" stroke-width="0.5" fill="none"/>
+        <path d="M40 40 L25 25 L10 40" stroke="#FF9933" stroke-width="0.5" fill="none"/>
+        <path d="M10 40 L25 25 L10 10" stroke="#138808" stroke-width="0.5" fill="none"/>
+      </g>
+    </pattern>
+  </defs>
+  
+  <!-- Apply pattern -->
+  <rect width="100" height="100" fill="url(#geometricPattern)"/>
+  
+  <!-- Additional decorative elements -->
+  <g opacity="0.05">
+    <!-- Lotus-inspired corner decorations -->
+    <path d="M0 0 Q10 5 20 0 Q15 10 20 20 Q10 15 0 20 Q5 10 0 0" fill="#FF9933"/>
+    <path d="M80 0 Q90 5 100 0 Q95 10 100 20 Q90 15 80 20 Q85 10 80 0" fill="#138808"/>
+    <path d="M100 80 Q90 85 80 80 Q85 90 80 100 Q90 95 100 100 Q95 90 100 80" fill="#FF9933"/>
+    <path d="M20 80 Q10 85 0 80 Q5 90 0 100 Q10 95 20 100 Q15 90 20 80" fill="#138808"/>
+  </g>
+</svg>

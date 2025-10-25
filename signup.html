@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your Brahmastra account - Join the AI-powered personalized learning platform inspired by Mahabharata wisdom">
+    <meta name="keywords" content="signup, registration, account, learning, Mahabharata, Brahmastra">
+    <meta name="author" content="Brahmastra Platform">
+    
+    <!-- Accessibility and SEO -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#FF9933">
+    
+    <title>Sign Up - Brahmastra Learning Platform</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/fonts/" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <main class="auth-container" role="main">
+        <div class="auth-card">
+            <!-- Logo and Header -->
+            <header class="auth-header">
+                <img src="assets/images/brahmastra-logo.svg" alt="Brahmastra Platform Logo" class="logo">
+                <h1 class="auth-title">Join Brahmastra</h1>
+                <p class="auth-subtitle">Begin your personalized learning journey</p>
+            </header>
+
+            <!-- Signup Form -->
+            <form class="auth-form" id="signupForm" novalidate>
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-wrapper">
+                        <img src="assets/images/lotus-icon.svg" alt="" class="input-icon" aria-hidden="true">
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-input" 
+                            required 
+                            autocomplete="username"
+                            aria-describedby="username-error username-help"
+                            placeholder="Choose a username"
+                            minlength="3"
+                            maxlength="20"
+                            pattern="[a-zA-Z0-9_]+"
+                        >
+                    </div>
+                    <div id="username-help" class="form-help">3-20 characters, letters, numbers, and underscores only</div>
+                    <div id="username-error" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <div class="input-wrapper">
+                        <img src="assets/images/lotus-icon.svg" alt="" class="input-icon" aria-hidden="true">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            required 
+                            autocomplete="email"
+                            aria-describedby="email-error"
+                            placeholder="Enter your email address"
+                        >
+                    </div>
+                    <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input" 
+                            required 
+                            autocomplete="new-password"
+                            aria-describedby="password-error password-help"
+                            placeholder="Create a strong password"
+                            minlength="8"
+                        >
+                        <button type="button" class="password-toggle" aria-label="Show password">
+                            <span class="sr-only">Show password</span>
+                        </button>
+                    </div>
+                    <div id="password-help" class="form-help">Minimum 8 characters</div>
+                    <div id="password-error" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            class="form-input" 
+                            required 
+                            autocomplete="new-password"
+                            aria-describedby="confirmPassword-error"
+                            placeholder="Confirm your password"
+                        >
+                        <button type="button" class="password-toggle" aria-label="Show password">
+                            <span class="sr-only">Show password</span>
+                        </button>
+                    </div>
+                    <div id="confirmPassword-error" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="acceptTerms" name="acceptTerms" class="form-checkbox" required>
+                        <label for="acceptTerms" class="checkbox-label">
+                            I accept the <a href="#" class="terms-link">Terms of Service</a> and 
+                            <a href="#" class="terms-link">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <div id="acceptTerms-error" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <button type="submit" class="auth-button primary">
+                    <span class="button-text">Create Account</span>
+                </button>
+
+                <div class="auth-footer">
+                    <p class="auth-switch">
+                        Already have an account? 
+                        <a href="index.html" class="auth-link">Sign in</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Screen reader only content -->
+    <div class="sr-only">
+        <h2>Registration Form</h2>
+        <p>Please fill out the form below to create your Brahmastra learning account.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lotus Icon for Input Fields -->
+  <defs>
+    <linearGradient id="lotusGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9933;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#138808;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Lotus Petals -->
+  <g fill="url(#lotusGradient)" opacity="0.8">
+    <!-- Top petal -->
+    <path d="M8 2 C6 4, 6 6, 8 7 C10 6, 10 4, 8 2 Z"/>
+    
+    <!-- Right petal -->
+    <path d="M14 8 C12 6, 10 6, 9 8 C10 10, 12 10, 14 8 Z"/>
+    
+    <!-- Bottom petal -->
+    <path d="M8 14 C10 12, 10 10, 8 9 C6 10, 6 12, 8 14 Z"/>
+    
+    <!-- Left petal -->
+    <path d="M2 8 C4 10, 6 10, 7 8 C6 6, 4 6, 2 8 Z"/>
+    
+    <!-- Diagonal petals -->
+    <path d="M11.5 4.5 C10 5.5, 9.5 6.5, 10.5 7.5 C11.5 6.5, 12 5.5, 11.5 4.5 Z"/>
+    <path d="M11.5 11.5 C10.5 10.5, 9.5 10, 8.5 11 C9.5 12, 10.5 12.5, 11.5 11.5 Z"/>
+    <path d="M4.5 11.5 C5.5 10.5, 6.5 10, 7.5 11 C6.5 12, 5.5 12.5, 4.5 11.5 Z"/>
+    <path d="M4.5 4.5 C6 5.5, 6.5 6.5, 5.5 7.5 C4.5 6.5, 4 5.5, 4.5 4.5 Z"/>
+  </g>
+  
+  <!-- Center -->
+  <circle cx="8" cy="8" r="2" fill="url(#lotusGradient)" opacity="0.9"/>
+  <circle cx="8" cy="8" r="1" fill="#FFFFFF" opacity="0.8"/>
+</svg>
