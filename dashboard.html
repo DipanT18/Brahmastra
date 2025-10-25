@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brahmastra Learning Dashboard - AI-powered personalized learning">
+    <title>Learning Dashboard - Brahmastra</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <div class="logo-section">
+                <img src="assets/images/brahmastra-logo.svg" alt="Brahmastra Logo" class="nav-logo">
+                <span class="brand-name">Brahmastra</span>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search courses, topics, or ask AI tutor...">
+            </div>
+        </div>
+        
+        <div class="nav-right">
+            <button class="nav-btn" id="notificationBtn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+            <button class="nav-btn" id="helpBtn">
+                <i class="fas fa-question-circle"></i>
+            </button>
+            <div class="profile-dropdown">
+                <button class="profile-btn" id="profileBtn">
+                    <img src="https://via.placeholder.com/40x40/FF9933/FFFFFF?text=U" alt="Profile" class="profile-avatar">
+                    <span class="profile-name">John Doe</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" id="profileMenu">
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-user"></i>
+                        Profile Settings
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-chart-line"></i>
+                        Learning Analytics
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-cog"></i>
+                        Preferences
+                    </a>
+                    <hr class="dropdown-divider">
+                    <a href="index.html" class="dropdown-item">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sign Out
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Quick Actions -->
+                <div class="sidebar-section">
+                    <button class="create-course-btn" id="createCourseBtn">
+                        <i class="fas fa-plus"></i>
+                        <span>Create New Course</span>
+                    </button>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Learning</h3>
+                    <nav class="sidebar-nav">
+                        <a href="#" class="nav-item active">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-book-open"></i>
+                            <span>My Courses</span>
+                            <span class="nav-badge">5</span>
+                        </a>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Progress</span>
+                        </a>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Achievements</span>
+                        </a>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-users"></i>
+                            <span>Community</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Current Course -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Current Course</h3>
+                    <div class="current-course-card">
+                        <div class="course-info">
+                            <h4 class="course-title">Machine Learning Fundamentals</h4>
+                            <p class="course-progress-text">Module 3 of 8</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 37.5%"></div>
+                            </div>
+                            <p class="progress-percentage">37% Complete</p>
+                        </div>
+                        <button class="continue-btn">
+                            <i class="fas fa-play"></i>
+                            Continue Learning
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AI Tutor -->
+                <div class="sidebar-section">
+                    <div class="ai-tutor-card">
+                        <div class="tutor-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="tutor-info">
+                            <h4 class="tutor-name">AI Tutor</h4>
+                            <p class="tutor-status">Online & Ready to Help</p>
+                        </div>
+                        <button class="chat-btn" id="openChatBtn">
+                            <i class="fas fa-comments"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">
+                        Welcome back, <span class="gradient-text">John</span>! 
+                        <span class="sanskrit-greeting">स्वागतम्</span>
+                    </h1>
+                    <p class="welcome-subtitle">Ready to continue your learning journey? Let's achieve your goals together.</p>
+                </div>
+                <div class="welcome-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Day Streak</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">This Week</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions-section">
+                <h2 class="section-title">Quick Actions</h2>
+                <div class="action-cards">
+                    <div class="action-card" id="startNewCourse">
+                        <div class="action-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3 class="action-title">Start New Course</h3>
+                            <p class="action-description">Let AI create a personalized learning path for you</p>
+                        </div>
+                        <div class="action-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="action-card" id="continueCurrentCourse">
+                        <div class="action-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3 class="action-title">Continue Current Course</h3>
+                            <p class="action-description">Pick up where you left off in Machine Learning</p>
+                        </div>
+                        <div class="action-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="action-card" id="practiceSkills">
+                        <div class="action-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3 class="action-title">Practice Skills</h3>
+                            <p class="action-description">Hands-on coding exercises and challenges</p>
+                        </div>
+                        <div class="action-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Progress -->
+            <section class="progress-section">
+                <div class="section-header">
+                    <h2 class="section-title">Your Learning Progress</h2>
+                    <button class="view-all-btn">View All Courses</button>
+                </div>
+                
+                <div class="course-grid">
+                    <div class="course-card active">
+                        <div class="course-header">
+                            <div class="course-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="course-status">In Progress</div>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Machine Learning Fundamentals</h3>
+                            <p class="course-description">Learn the core concepts of ML algorithms and applications</p>
+                            <div class="course-progress">
+                                <div class="progress-info">
+                                    <span class="progress-text">3 of 8 modules</span>
+                                    <span class="progress-percent">37%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 37%"></div>
+                                </div>
+                            </div>
+                            <div class="course-meta">
+                                <span class="course-time">
+                                    <i class="fas fa-clock"></i>
+                                    2h 30m left
+                                </span>
+                                <span class="course-difficulty">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="course-status">Not Started</div>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Python Programming</h3>
+                            <p class="course-description">Master Python from basics to advanced concepts</p>
+                            <div class="course-progress">
+                                <div class="progress-info">
+                                    <span class="progress-text">0 of 12 modules</span>
+                                    <span class="progress-percent">0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="course-meta">
+                                <span class="course-time">
+                                    <i class="fas fa-clock"></i>
+                                    8h estimated
+                                </span>
+                                <span class="course-difficulty">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card completed">
+                        <div class="course-header">
+                            <div class="course-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="course-status">Completed</div>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Data Structures Basics</h3>
+                            <p class="course-description">Understanding fundamental data structures</p>
+                            <div class="course-progress">
+                                <div class="progress-info">
+                                    <span class="progress-text">6 of 6 modules</span>
+                                    <span class="progress-percent">100%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="course-meta">
+                                <span class="course-time">
+                                    <i class="fas fa-check-circle"></i>
+                                    Completed
+                                </span>
+                                <span class="course-difficulty">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="activity-section">
+                <h2 class="section-title">Recent Activity</h2>
+                <div class="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-text">
+                                <strong>Achievement Unlocked!</strong> Completed "Linear Regression" module
+                            </p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-text">
+                                Submitted practical exercise: "Building a Simple ML Model"
+                            </p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-text">
+                                Had a productive session with AI Tutor about gradient descent
+                            </p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- AI Chat Modal -->
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Tutor</span>
+                </div>
+                <button class="chat-close" id="closeChatBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm your AI tutor. How can I help you with your learning today?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Ask me anything about your courses..." id="chatInput">
+                <button class="send-btn" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Creation Modal -->
+    <div class="modal" id="courseModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Create Your Personalized Course</h2>
+                <button class="modal-close" id="closeCourseModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <form class="course-form" id="courseForm">
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-title">What do you want to learn?</h3>
+                        <div class="form-group">
+                            <label for="concept">Concept or Skill</label>
+                            <input type="text" id="concept" name="concept" placeholder="e.g., Machine Learning, Web Development, Data Science" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Describe your learning goals (optional)</label>
+                            <textarea id="description" name="description" placeholder="What specific aspects interest you? What do you want to achieve?"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-title">What's your current level?</h3>
+                        <div class="level-options">
+                            <label class="level-option">
+                                <input type="radio" name="level" value="beginner">
+                                <div class="option-card">
+                                    <i class="fas fa-seedling"></i>
+                                    <h4>Beginner</h4>
+                                    <p>I'm new to this topic</p>
+                                </div>
+                            </label>
+                            <label class="level-option">
+                                <input type="radio" name="level" value="intermediate">
+                                <div class="option-card">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h4>Intermediate</h4>
+                                    <p>I have some basic knowledge</p>
+                                </div>
+                            </label>
+                            <label class="level-option">
+                                <input type="radio" name="level" value="advanced">
+                                <div class="option-card">
+                                    <i class="fas fa-rocket"></i>
+                                    <h4>Advanced</h4>
+                                    <p>I want to deepen my expertise</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-title">How do you prefer to learn?</h3>
+                        <div class="learning-styles">
+                            <label class="style-option">
+                                <input type="checkbox" name="learningStyle" value="visual">
+                                <div class="option-card">
+                                    <i class="fas fa-eye"></i>
+                                    <h4>Visual</h4>
+                                    <p>Diagrams, charts, images</p>
+                                </div>
+                            </label>
+                            <label class="style-option">
+                                <input type="checkbox" name="learningStyle" value="practical">
+                                <div class="option-card">
+                                    <i class="fas fa-hands"></i>
+                                    <h4>Hands-on</h4>
+                                    <p>Coding, exercises, projects</p>
+                                </div>
+                            </label>
+                            <label class="style-option">
+                                <input type="checkbox" name="learningStyle" value="theoretical">
+                                <div class="option-card">
+                                    <i class="fas fa-book"></i>
+                                    <h4>Theoretical</h4>
+                                    <p>Concepts, explanations</p>
+                                </div>
+                            </label>
+                            <label class="style-option">
+                                <input type="checkbox" name="learningStyle" value="interactive">
+                                <div class="option-card">
+                                    <i class="fas fa-comments"></i>
+                                    <h4>Interactive</h4>
+                                    <p>Q&A, discussions, quizzes</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" data-step="4">
+                        <h3 class="step-title">Final preferences</h3>
+                        <div class="form-group">
+                            <label for="language">Preferred Language</label>
+                            <select id="language" name="language">
+                                <option value="english">English</option>
+                                <option value="hindi">Hindi (हिंदी)</option>
+                                <option value="spanish">Spanish</option>
+                                <option value="french">French</option>
+                                <option value="german">German</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeCommitment">Time Commitment</label>
+                            <select id="timeCommitment" name="timeCommitment">
+                                <option value="1-2">1-2 hours per week</option>
+                                <option value="3-5">3-5 hours per week</option>
+                                <option value="6-10">6-10 hours per week</option>
+                                <option value="10+">10+ hours per week</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline">Target Completion (optional)</label>
+                            <input type="date" id="deadline" name="deadline">
+                        </div>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">Previous</button>
+                        <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                        <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">
+                            <i class="fas fa-magic"></i>
+                            Generate My Course
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
