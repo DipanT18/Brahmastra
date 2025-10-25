@@ -1,0 +1,53 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <defs>
+    <linearGradient id="communityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="100%" style="stop-color:#138808"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#communityGrad)" rx="15"/>
+  
+  <!-- People icons -->
+  <g fill="white">
+    <!-- Person 1 -->
+    <circle cx="100" cy="80" r="15"/>
+    <ellipse cx="100" cy="110" rx="20" ry="15"/>
+    
+    <!-- Person 2 -->
+    <circle cx="150" cy="70" r="18"/>
+    <ellipse cx="150" cy="105" rx="23" ry="18"/>
+    
+    <!-- Person 3 -->
+    <circle cx="200" cy="80" r="15"/>
+    <ellipse cx="200" cy="110" rx="20" ry="15"/>
+    
+    <!-- Person 4 -->
+    <circle cx="75" cy="130" r="12"/>
+    <ellipse cx="75" cy="155" rx="16" ry="12"/>
+    
+    <!-- Person 5 -->
+    <circle cx="225" cy="130" r="12"/>
+    <ellipse cx="225" cy="155" rx="16" ry="12"/>
+  </g>
+  
+  <!-- Connection lines -->
+  <line x1="100" y1="95" x2="150" y2="88" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <line x1="150" y1="88" x2="200" y2="95" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <line x1="100" y1="110" x2="75" y2="140" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <line x1="200" y1="110" x2="225" y2="140" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <line x1="150" y1="105" x2="75" y2="145" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <line x1="150" y1="105" x2="225" y2="145" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  
+  <!-- Chat bubbles -->
+  <ellipse cx="60" cy="50" rx="25" ry="15" fill="rgba(255,255,255,0.8)"/>
+  <text x="60" y="55" text-anchor="middle" fill="#FF6B35" font-size="10">💬</text>
+  
+  <ellipse cx="240" cy="60" rx="25" ry="15" fill="rgba(255,255,255,0.8)"/>
+  <text x="240" y="65" text-anchor="middle" fill="#FF6B35" font-size="10">🤝</text>
+  
+  <!-- Title -->
+  <text x="150" y="25" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Learning Community</text>
+  <text x="150" y="185" text-anchor="middle" fill="white" font-size="12">Collaborative Learning</text>
+</svg>

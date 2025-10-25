@@ -1,10 +1,9 @@
-<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Brahmastra Logo - Traditional Indian Design -->
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF9933;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#138808;stop-opacity:1" />
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9933"/>
+      <stop offset="50%" style="stop-color:#FF6B35"/>
+      <stop offset="100%" style="stop-color:#138808"/>
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -15,39 +14,28 @@
     </filter>
   </defs>
   
-  <!-- Outer Circle - Representing the Universe -->
-  <circle cx="30" cy="30" r="28" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8"/>
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="28" fill="url(#logoGrad)" filter="url(#glow)"/>
   
-  <!-- Inner Sacred Geometry -->
-  <g filter="url(#glow)">
-    <!-- Central Lotus Petals -->
-    <path d="M30 10 L35 20 L30 25 L25 20 Z" fill="url(#logoGradient)" opacity="0.9"/>
-    <path d="M50 30 L40 35 L35 30 L40 25 Z" fill="url(#logoGradient)" opacity="0.9"/>
-    <path d="M30 50 L25 40 L30 35 L35 40 Z" fill="url(#logoGradient)" opacity="0.9"/>
-    <path d="M10 30 L20 25 L25 30 L20 35 Z" fill="url(#logoGradient)" opacity="0.9"/>
+  <!-- Om symbol (ॐ) stylized -->
+  <g transform="translate(30,30)" fill="white">
+    <!-- Main Om curves -->
+    <path d="M-12,-8 Q-8,-12 -4,-8 Q0,-4 4,-8 Q8,-12 12,-8 Q8,-4 4,0 Q0,4 -4,0 Q-8,-4 -12,-8 Z" opacity="0.9"/>
     
-    <!-- Diagonal Petals -->
-    <path d="M42 18 L37 23 L32 18 L37 13 Z" fill="url(#logoGradient)" opacity="0.7"/>
-    <path d="M42 42 L37 37 L42 32 L47 37 Z" fill="url(#logoGradient)" opacity="0.7"/>
-    <path d="M18 42 L23 37 L28 42 L23 47 Z" fill="url(#logoGradient)" opacity="0.7"/>
-    <path d="M18 18 L23 23 L18 28 L13 23 Z" fill="url(#logoGradient)" opacity="0.7"/>
+    <!-- Central dot -->
+    <circle cx="0" cy="-2" r="3" fill="white"/>
+    
+    <!-- Top curve -->
+    <path d="M-6,-12 Q0,-16 6,-12" stroke="white" stroke-width="2" fill="none"/>
+    
+    <!-- Bottom elements -->
+    <path d="M-8,4 Q0,8 8,4" stroke="white" stroke-width="2" fill="none"/>
+    <circle cx="0" cy="8" r="2" fill="white"/>
   </g>
   
-  <!-- Central Sacred Symbol -->
-  <circle cx="30" cy="30" r="8" fill="url(#logoGradient)" opacity="0.9"/>
-  <circle cx="30" cy="30" r="4" fill="#FFFFFF" opacity="0.9"/>
-  
-  <!-- Sanskrit-inspired decorative elements -->
-  <g stroke="url(#logoGradient)" stroke-width="1" fill="none" opacity="0.6">
-    <path d="M15 15 Q20 10 25 15"/>
-    <path d="M35 15 Q40 10 45 15"/>
-    <path d="M45 35 Q50 40 45 45"/>
-    <path d="M25 45 Q20 50 15 45"/>
-  </g>
-  
-  <!-- Outer decorative dots -->
-  <circle cx="30" cy="5" r="1.5" fill="url(#logoGradient)" opacity="0.8"/>
-  <circle cx="55" cy="30" r="1.5" fill="url(#logoGradient)" opacity="0.8"/>
-  <circle cx="30" cy="55" r="1.5" fill="url(#logoGradient)" opacity="0.8"/>
-  <circle cx="5" cy="30" r="1.5" fill="url(#logoGradient)" opacity="0.8"/>
+  <!-- Decorative elements -->
+  <circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="45" cy="15" r="2" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="15" cy="45" r="2" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="45" cy="45" r="2" fill="rgba(255,255,255,0.3)"/>
 </svg>

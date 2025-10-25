@@ -1,0 +1,55 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <defs>
+    <linearGradient id="mindfulGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#138808"/>
+      <stop offset="100%" style="stop-color:#FF9933"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#mindfulGrad)" rx="15"/>
+  
+  <!-- Meditation figure -->
+  <g fill="white">
+    <!-- Head -->
+    <circle cx="150" cy="70" r="20"/>
+    
+    <!-- Body -->
+    <ellipse cx="150" cy="110" rx="25" ry="30"/>
+    
+    <!-- Arms in meditation pose -->
+    <ellipse cx="120" cy="100" rx="8" ry="20" transform="rotate(-30 120 100)"/>
+    <ellipse cx="180" cy="100" rx="8" ry="20" transform="rotate(30 180 100)"/>
+    
+    <!-- Legs crossed -->
+    <ellipse cx="135" cy="135" rx="15" ry="8"/>
+    <ellipse cx="165" cy="135" rx="15" ry="8"/>
+  </g>
+  
+  <!-- Meditation aura/energy -->
+  <circle cx="150" cy="100" r="60" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <circle cx="150" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Floating elements -->
+  <circle cx="100" cy="50" r="3" fill="rgba(255,255,255,0.6)">
+    <animate attributeName="cy" values="50;45;50" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="60" r="3" fill="rgba(255,255,255,0.6)">
+    <animate attributeName="cy" values="60;55;60" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="120" r="2" fill="rgba(255,255,255,0.5)">
+    <animate attributeName="cy" values="120;115;120" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="220" cy="110" r="2" fill="rgba(255,255,255,0.5)">
+    <animate attributeName="cy" values="110;105;110" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Lotus petals -->
+  <ellipse cx="150" cy="160" rx="30" ry="8" fill="rgba(255,255,255,0.4)"/>
+  <ellipse cx="130" cy="165" rx="20" ry="6" fill="rgba(255,255,255,0.3)" transform="rotate(-20 130 165)"/>
+  <ellipse cx="170" cy="165" rx="20" ry="6" fill="rgba(255,255,255,0.3)" transform="rotate(20 170 165)"/>
+  
+  <!-- Title -->
+  <text x="150" y="25" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Mindful Learning</text>
+  <text x="150" y="185" text-anchor="middle" fill="white" font-size="12">Focus & Retention</text>
+</svg>
