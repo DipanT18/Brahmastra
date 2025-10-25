@@ -1,0 +1,15 @@
+<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="communityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="100%" style="stop-color:#138808"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="35" fill="url(#communityGrad)" opacity="0.2"/>
+  <circle cx="30" cy="30" r="6" fill="url(#communityGrad)"/>
+  <circle cx="50" cy="30" r="6" fill="url(#communityGrad)"/>
+  <circle cx="40" cy="50" r="6" fill="url(#communityGrad)"/>
+  <path d="M25 45 Q30 40 35 45 L35 55 Q30 60 25 55 Z" fill="url(#communityGrad)"/>
+  <path d="M45 45 Q50 40 55 45 L55 55 Q50 60 45 55 Z" fill="url(#communityGrad)"/>
+  <path d="M35 60 Q40 55 45 60 L45 70 Q40 75 35 70 Z" fill="url(#communityGrad)"/>
+</svg>
